@@ -45,6 +45,11 @@ class MyPlugin(Plugin):
         # Add widget to the user interface
         context.add_widget(self._widget)
 
+        self._widget.btnTest.clicked.connect(self.test_button_clicked)
+
+    def test_button_clicked(self):
+        print('Hello')
+
     def shutdown_plugin(self):
         # TODO unregister all publishers here
         pass
